@@ -20,5 +20,6 @@ export default class MulterGoogleCloudStorage implements multer.StorageEngine {
 export declare function storageEngine(opts?: ConfigurationObject & {
     filename?: any;
     bucket?: string;
+    contentType?: ContentTypeFunction;
 }): MulterGoogleCloudStorage;
 export declare type ContentTypeFunction = (req: Request, file: Express.Multer.File) => string | undefined;
