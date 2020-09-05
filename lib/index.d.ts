@@ -12,6 +12,7 @@ export default class MulterGoogleCloudStorage implements multer.StorageEngine {
     constructor(opts?: ConfigurationObject & {
         filename?: any;
         bucket?: string;
+        acl?: string;
         contentType?: ContentTypeFunction;
     });
     _handleFile: (req: any, file: any, cb: any) => void;
@@ -21,5 +22,6 @@ export declare function storageEngine(opts?: ConfigurationObject & {
     filename?: any;
     bucket?: string;
     contentType?: ContentTypeFunction;
+    acl?: string;
 }): MulterGoogleCloudStorage;
 export declare type ContentTypeFunction = (req: Request, file: Express.Multer.File) => string | undefined;
